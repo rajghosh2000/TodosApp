@@ -3,9 +3,7 @@ import {
   View,
   Text,
   StyleSheet,
-  TouchableOpacity,
-  TouchableNativeFeedback,
-  TouchableHighlight,
+  TouchableOpacity
 } from "react-native";
 
 const GoalItem = (props) => {
