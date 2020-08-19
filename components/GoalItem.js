@@ -3,14 +3,14 @@ import { View, Text, StyleSheet, TouchableOpacity, TouchableNativeFeedback, Touc
 
 const GoalItem = (props) => {
   return (
-    <TouchableNativeFeedback 
-        onPress={props.onDelete}
+    <TouchableOpacity
+        onPress={props.onDelete.bind(this, props.id)}
         activeOpacity={0.8}
     >
       <View style={styles.listItem}>
         <Text>{props.title}</Text>
       </View>
-    </TouchableNativeFeedback>
+    </TouchableOpacity>
   );
 };
 
