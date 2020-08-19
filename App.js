@@ -5,10 +5,15 @@ import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 export default function App() {
   return (
     <View style={{padding: 40}}>
-      <View>
+      <View style={{
+        flexDirection: 'row',
+        justifyContent:'space-between',
+        alignContent: 'center'
+      }}>
         <TextInput
           placeholder="Enter your todo here"
           style={{
+            width : '80%',
             borderColor : 'black',
             borderWidth: 2,
             padding : 10
