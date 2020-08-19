@@ -13,7 +13,7 @@ const GoalInput = (props) => {
     setEnteredGoal("");
   };
   return (
-    <Modal visible={props.visibleModal} animationType="fade">
+    <Modal visible={props.visibleModal} animationType="slide">
       <View style={styles.inputContainer}>
         <TextInput
           placeholder="Enter your todo here"
