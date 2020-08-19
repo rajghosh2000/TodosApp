@@ -5,6 +5,7 @@ import {
   View,
   Button,
   FlatList,
+  Text
 } from "react-native";
 import GoalItem from "./components/GoalItem";
 import GoalInput from "./components/GoalInput";
@@ -36,6 +37,11 @@ export default function App() {
 
   return (
     <View style={styles.screen}>
+      <View style={styles.startTextView} >
+        <Text style={styles.startText}>
+          Todos App 
+        </Text>
+      </View>
       <Button
         title="Add Task"
         color="#6AB04A"
@@ -69,4 +75,14 @@ const styles = StyleSheet.create({
     backgroundColor: "#0A3D62",
     flex: 1,
   },
+  startTextView : {
+    justifyContent:'center',
+    alignItems:'center',
+    marginBottom:50
+  },
+  startText: {
+    fontSize : 30,
+    color : "white",
+    fontWeight : 'bold'
+  }
 });
