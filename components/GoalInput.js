@@ -23,7 +23,7 @@ const GoalInput = (props) => {
         <Button
           title="ADD"
           onPress={props.onAddGoal.bind(this, enteredGoal)}
-          style={styles.addButton}
+          color="#6AB04A"
         />
       </View>
     </Modal>
@@ -32,28 +32,22 @@ const GoalInput = (props) => {
 
 const styles = StyleSheet.create({
   inputContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignContent: "center",
-    tintColor: "green",
+    flex:1,
+    justifyContent: "center",
+    alignItems: "center",
   },
   input: {
     width: "80%",
     borderColor: "black",
     borderWidth: 1,
-    padding: 10,
+    padding: 20,
     backgroundColor: "#ccc",
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
     borderTopRightRadius: 20,
     borderTopLeftRadius: 25,
     overflow: "hidden",
-  },
-  addButton: {
-    borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
-    borderTopRightRadius: 20,
-    borderTopLeftRadius: 25,
+    marginBottom : 20
   },
 });
 
