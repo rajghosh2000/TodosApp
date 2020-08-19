@@ -27,6 +27,7 @@ export default function App() {
         renderItem={itemData => (
           <GoalItem 
             title={itemData.item.value}
+            onDelete={() => console.log("DeletePresses")}
           />
         )}      
       />     
