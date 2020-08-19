@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { View, TextInput, Button, StyleSheet, Modal } from "react-native";
 
 const GoalInput = (props) => {
-
   const [enteredGoal, setEnteredGoal] = useState("");
 
   const goalInputHandler = (enteredText) => {
@@ -11,13 +10,10 @@ const GoalInput = (props) => {
 
   const addGoalHandler = (enteredGoal) => {
     props.onAddGoal(enteredGoal);
-    setEnteredGoal('');
-  }
+    setEnteredGoal("");
+  };
   return (
-    <Modal 
-        visible={props.visibleModal}
-        animationType='fade'
-    >
+    <Modal visible={props.visibleModal} animationType="fade">
       <View style={styles.inputContainer}>
         <TextInput
           placeholder="Enter your todo here"
@@ -26,16 +22,15 @@ const GoalInput = (props) => {
           onChangeText={goalInputHandler}
           value={enteredGoal}
         />
-        <Button
-          title="ADD"
-          onPress={addGoalHandler}
-          color="#6AB04A"
-        />
-        <Button 
-            title="Cancel"
-            color="red"
-            onPress={props.onCancel}
-        />
+
+        <View style={styles.buttonContainer}>
+          <View style={styles.button}>
+            <Button title="ADD" onPress={addGoalHandler} color="#6AB04A" />
+          </View>
+          <View style={styles.button}>
+            <Button title="Cancel" color="red" onPress={props.onCancel} />
+          </View>
+        </View>
       </View>
     </Modal>
   );
@@ -43,7 +38,7 @@ const GoalInput = (props) => {
 
 const styles = StyleSheet.create({
   inputContainer: {
-    flex:1,
+    flex: 1,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -58,7 +53,15 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 20,
     borderTopLeftRadius: 25,
     overflow: "hidden",
-    marginBottom : 20
+    marginBottom: 20,
+  },
+  buttonContainer: {
+    flexDirection: "column",
+    width: "60%",
+  },
+  button: {
+    width: "100%",
+    marginBottom: 20,
   },
 });
 
